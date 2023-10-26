@@ -5,12 +5,13 @@ import (
 	"ant-frame/bootstrap/initialize"
 	"context"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -19,9 +20,9 @@ func main() {
 	// 初始化日志
 	initialize.InitLogger()
 	// 初始化数据库
-
+	initialize.InitMysql()
 	//初始化Casbin
-
+	initialize.InitCasbin()
 	// 初始化路由
 
 }
